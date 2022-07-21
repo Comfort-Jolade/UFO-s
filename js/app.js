@@ -67,11 +67,10 @@ function updateFilters() {
    // matches the filter values
   Object.entries(filters).forEach(([key, val])=>{
     update_tableData = update_tableData.filter(row => row[key] === val);
-
+  });
     // 10. Finally, rebuild the table using the filtered data
     buildTable(update_tableData);
 
-  });
   }
   
   // 2. Attach an event to listen for changes to each filter
